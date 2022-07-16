@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card bg-dark p-4 text-white">
+        <h2>Update a Task</h2>
+        <form action="/tasks/{{task._id}}/edit" method="post">
+          <div class="card-body">
+            <input
+              type="text"
+              name="title"
+              id=""
+              placeholder="Title"
+              value="{{task.title}}"
+              class="form-control bg-dark text-white mb-3"
+            />
+            <textarea
+              name="description"
+              placeholder="Add a description"
+              class="form-control bg-dark text-white"
+            >{{task.description}}</textarea>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
